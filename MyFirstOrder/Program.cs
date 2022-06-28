@@ -17,23 +17,22 @@ namespace MyFirstOrder
         static int[] Sort(int[] a)
         {
             int[] result = new int[a.Length];
-
-            int min = int.MaxValue;
-            for (int i = 0; i < a.Length; i++) 
-            {
-                if (a[i] < min)
-                {
-                    min = a[i];
-                }
-            }
-
-
+            int mim5 = FindMin(a);
+            Console.WriteLine("min: " + mim5);
             return result;
-
         }
 
-
-
-
+        static int FindMin(int[] array)
+        {
+            int min = int.MaxValue;
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] < min)
+                {
+                    min = array[i];
+                }
+            }
+            return min;
+        }
     }
 }
